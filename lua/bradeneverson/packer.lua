@@ -15,10 +15,20 @@ use {
 use({
 	'rebelot/kanagawa.nvim',
 	as = 'kanagawa',
-	config = function()
-		vim.cmd('colorscheme kanagawa')
+    --config = function()
+		--vim.cmd('colorscheme kanagawa')
+	--end
+})
+
+
+use({
+	'vague2k/vague.nvim',
+	as = 'vague',
+    config = function()
+		vim.cmd('colorscheme vague')
 	end
 })
+
 use('cocopon/iceberg.vim')
 use('OmniSharp/omnisharp-vim')
 use({'catppuccin/nvim', as = 'catppucin'})

@@ -100,7 +100,6 @@ _G.packer_plugins = {
     url = "https://github.com/cocopon/iceberg.vim"
   },
   kanagawa = {
-    config = { "\27LJ\2\n8\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\25colorscheme kanagawa\bcmd\bvim\0" },
     loaded = true,
     path = "/home/braden/.local/share/nvim/site/pack/packer/start/kanagawa",
     url = "https://github.com/rebelot/kanagawa.nvim"
@@ -185,6 +184,12 @@ _G.packer_plugins = {
     path = "/home/braden/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
   },
+  vague = {
+    config = { "\27LJ\2\n5\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\22colorscheme vague\bcmd\bvim\0" },
+    loaded = true,
+    path = "/home/braden/.local/share/nvim/site/pack/packer/start/vague",
+    url = "https://github.com/vague2k/vague.nvim"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/braden/.local/share/nvim/site/pack/packer/start/vim-fugitive",
@@ -193,10 +198,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: kanagawa
-time([[Config for kanagawa]], true)
-try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\25colorscheme kanagawa\bcmd\bvim\0", "config", "kanagawa")
-time([[Config for kanagawa]], false)
+-- Config for: vague
+time([[Config for vague]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\22colorscheme vague\bcmd\bvim\0", "config", "vague")
+time([[Config for vague]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
