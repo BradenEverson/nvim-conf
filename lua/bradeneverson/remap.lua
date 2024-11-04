@@ -16,3 +16,5 @@ vim.keymap.set("n", "<C-t><C-r>", ":! cargo test -- --nocapture<CR>")
 
 vim.keymap.set("n", "<leader>r", ":terminal cargo run<CR>")
 vim.keymap.set("n", "<leader>rr", ":terminal cargo run -r<CR>")
+
+vim.keymap.set("n", "<leader>qq", ":bd!<CR>")
