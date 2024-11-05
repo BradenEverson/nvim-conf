@@ -1,4 +1,5 @@
 # How I like My NeoVim 
+## Created from tutorial by ThePrimeagen
 
 # Setup
 Once installed, run the following command to download Packer on your system:
