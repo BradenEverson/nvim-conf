@@ -8,8 +8,8 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Rust Based Remaps for builidng running and testing
-vim.keymap.set("n", "<leader>b", ":! cargo build<CR>")
-vim.keymap.set("n", "<leader>br", ":! cargo build -r<CR>")
+vim.keymap.set("n", "<leader>b", ":terminal cargo build<CR>")
+vim.keymap.set("n", "<leader>br", ":terminal cargo build -r<CR>")
 
 vim.keymap.set('n', '<leader>t', function()
   vim.cmd('cd %:p:h')
