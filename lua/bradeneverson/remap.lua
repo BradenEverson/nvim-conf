@@ -21,12 +21,15 @@ vim.keymap.set('n', '<leader>tr', function()
   vim.cmd('terminal cargo test -- --nocapture')
 end, { silent = true })
 
-vim.keymap.set('n', '<leader>r', function()
+vim.keymap.set("n", "<leader>r", ":terminal cargo run<CR>")
+vim.keymap.set("n", "<leader>rr", ":terminal cargo run -r<CR>")
+
+vim.keymap.set('n', '<leader>wr', function()
   vim.cmd('cd %:p:h')
   vim.cmd('terminal cargo run')
 end, { silent = true })
 
-vim.keymap.set('n', '<leader>r', function()
+vim.keymap.set('n', '<leader>wrr', function()
   vim.cmd('cd %:p:h')
   vim.cmd('terminal cargo run -r')
 end, { silent = true })
