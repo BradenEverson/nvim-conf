@@ -12,12 +12,10 @@ vim.keymap.set("n", "<leader>b", ":terminal cargo build<CR>")
 vim.keymap.set("n", "<leader>br", ":terminal cargo build -r<CR>")
 
 vim.keymap.set('n', '<leader>t', function()
-  vim.cmd('cd %:p:h')
   vim.cmd('terminal cargo test')
 end, { silent = true })
 
 vim.keymap.set('n', '<leader>tr', function()
-  vim.cmd('cd %:p:h')
   vim.cmd('terminal cargo test -- --nocapture')
 end, { silent = true })
 
