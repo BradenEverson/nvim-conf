@@ -19,7 +19,17 @@ vim.keymap.set('n', '<leader>tr', function()
   vim.cmd('terminal cargo test -- --nocapture')
 end, { silent = true })
 
-vim.keymap.set("n", "<leader>r", ":terminal cargo run<CR>")
+vim.keymap.set("n", "<leader>r", function()
+  local file_ext = vim.fn.expand("%:e")
+  if file_ext == "rs" then
+    vim.cmd("terminal cargo run")
+  elseif file_ext == "go" then
+    vim.cmd("terminal go run .")
+  else
+    print("Unsupported file type for running.")
+  end
+end)
+
 vim.keymap.set("n", "<leader>rr", ":terminal cargo run -r<CR>")
 
 vim.keymap.set('n', '<leader>wr', function()
