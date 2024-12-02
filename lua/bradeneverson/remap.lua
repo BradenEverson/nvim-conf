@@ -11,9 +11,16 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "<leader>b", ":terminal cargo build<CR>")
 vim.keymap.set("n", "<leader>br", ":terminal cargo build -r<CR>")
 
-vim.keymap.set('n', '<leader>t', function()
-  vim.cmd('terminal cargo test')
-end, { silent = true })
+vim.keymap.set("n", "<leader>t", function()
+  local file_ext = vim.fn.expand("%:e")
+  if file_ext == "rs" then
+    vim.cmd("terminal cargo test")
+  elseif file_ext == "go" then
+    vim.cmd("terminal go test .")
+  else
+    print("Unsupported file type for testing.")
+  end
+end)
 
 vim.keymap.set('n', '<leader>tr', function()
   vim.cmd('terminal cargo test -- --nocapture')
