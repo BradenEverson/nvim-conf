@@ -20,6 +20,7 @@ use({
 	--end
 })
 
+use("ThePrimeagen/vim-be-good")
 
 use({
 	'vague2k/vague.nvim',
