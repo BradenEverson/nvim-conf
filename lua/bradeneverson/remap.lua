@@ -39,6 +39,8 @@ end)
 
 vim.keymap.set("n", "<leader>rr", ":terminal cargo run -r<CR>")
 
+vim.keymap.set("n", "<leader>ca", ":!cargo add ")
+
 vim.keymap.set('n', '<leader>wr', function()
   vim.cmd('cd %:p:h')
   vim.cmd('terminal cargo run')
