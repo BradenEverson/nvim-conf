@@ -34,6 +34,13 @@ use {
 }
 
 use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+}
+
+use {
   "~/source/lua/typebeat.nvim",
   as = "typebeat",
   config = function()
