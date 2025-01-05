@@ -12,6 +12,35 @@ use {
   requires = { {'nvim-lua/plenary.nvim'} }
 }
 
+use {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+}
+
+use {
+    'KadoBOT/nvim-spotify',
+    requires = 'nvim-telescope/telescope.nvim',
+    config = function()
+        local spotify = require'nvim-spotify'
+
+        spotify.setup {
+            status = {
+                update_interval = 10000, -- the interval (ms) to check for what's currently playing
+                format = '%s %t by %a' -- spotify-tui --format argument
+            }
+        }
+    end,
+    run = 'make'
+}
+
+use {
+  "~/source/lua/typebeat.nvim",
+  as = "typebeat",
+  config = function()
+    require("typebeat")
+  end
+}
+
 use({
 	'rebelot/kanagawa.nvim',
 	as = 'kanagawa',
