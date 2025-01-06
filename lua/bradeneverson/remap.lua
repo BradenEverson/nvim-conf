@@ -7,6 +7,9 @@ vim.keymap.set("n", "<leader>sq", vim.cmd.wq)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
 -- Rust Based Remaps for builidng running and testing
 vim.keymap.set("n", "<leader>b", ":terminal cargo build<CR>")
 vim.keymap.set("n", "<leader>br", ":terminal cargo build -r<CR>")
@@ -55,7 +58,6 @@ vim.keymap.set("n", "<leader>c", ":terminal cargo clippy<CR>")
 
 vim.keymap.set("n", "<leader>qq", ":bd!<CR>")
 
--- Spotify Remaps
 vim.api.nvim_set_keymap("n", "<leader>sn", "<Plug>(SpotifySkip)", { silent = true }) -- Skip the current track
 vim.api.nvim_set_keymap("n", "<leader>sp", "<Plug>(SpotifyPause)", { silent = true }) -- Pause/Resume the current track
 vim.api.nvim_set_keymap("n", "<leader>ss", "<Plug>(SpotifySave)", { silent = true }) -- Add the current track to your library
