@@ -10,6 +10,12 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
+vim.keymap.set('n', '<Tab>', '>>_')
+vim.keymap.set('n', '<S-Tab>', '<<_')
+
+vim.keymap.set('v', '<Tab>', '>gv')
+vim.keymap.set('v', '<S-Tab>', '<gv')
+
 -- Rust Based Remaps for builidng running and testing
 vim.keymap.set("n", "<leader>b", ":terminal cargo build<CR>")
 vim.keymap.set("n", "<leader>br", ":terminal cargo build -r<CR>")
