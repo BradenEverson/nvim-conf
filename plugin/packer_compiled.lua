@@ -151,7 +151,7 @@ _G.packer_plugins = {
     url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-spotify"] = {
-    config = { "\27LJ\2\nÅ\1\0\0\5\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\4\0005\4\3\0=\4\5\3B\1\2\1K\0\1\0\vstatus\1\0\1\vstatus\0\1\0\2\vformat\16%s %t by %a\20update_interval\3êN\nsetup\17nvim-spotify\frequire\0" },
+    config = { "\27LJ\2\nÅ\1\0\0\5\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\4\0005\4\3\0=\4\5\3B\1\2\1K\0\1\0\vstatus\1\0\1\vstatus\0\1\0\2\20update_interval\3êN\vformat\16%s %t by %a\nsetup\17nvim-spotify\frequire\0" },
     loaded = true,
     path = "/home/braden/.local/share/nvim/site/pack/packer/start/nvim-spotify",
     url = "https://github.com/KadoBOT/nvim-spotify"
@@ -202,12 +202,6 @@ _G.packer_plugins = {
     path = "/home/braden/.local/share/nvim/site/pack/packer/start/transparent.nvim",
     url = "https://github.com/xiyaowong/transparent.nvim"
   },
-  typebeat = {
-    config = { "\27LJ\2\n(\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\rtypebeat\frequire\0" },
-    loaded = true,
-    path = "/home/braden/.local/share/nvim/site/pack/packer/start/typebeat",
-    url = "/home/braden/source/lua/typebeat.nvim"
-  },
   undotree = {
     loaded = true,
     path = "/home/braden/.local/share/nvim/site/pack/packer/start/undotree",
@@ -234,16 +228,12 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: nvim-spotify
 time([[Config for nvim-spotify]], true)
-try_loadstring("\27LJ\2\nÅ\1\0\0\5\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\4\0005\4\3\0=\4\5\3B\1\2\1K\0\1\0\vstatus\1\0\1\vstatus\0\1\0\2\vformat\16%s %t by %a\20update_interval\3êN\nsetup\17nvim-spotify\frequire\0", "config", "nvim-spotify")
+try_loadstring("\27LJ\2\nÅ\1\0\0\5\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\4\0005\4\3\0=\4\5\3B\1\2\1K\0\1\0\vstatus\1\0\1\vstatus\0\1\0\2\20update_interval\3êN\vformat\16%s %t by %a\nsetup\17nvim-spotify\frequire\0", "config", "nvim-spotify")
 time([[Config for nvim-spotify]], false)
 -- Config for: Comment.nvim
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
 time([[Config for Comment.nvim]], false)
--- Config for: typebeat
-time([[Config for typebeat]], true)
-try_loadstring("\27LJ\2\n(\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\rtypebeat\frequire\0", "config", "typebeat")
-time([[Config for typebeat]], false)
 -- Config for: vague
 time([[Config for vague]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\22colorscheme vague\bcmd\bvim\0", "config", "vague")

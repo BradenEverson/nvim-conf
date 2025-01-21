@@ -10,6 +10,8 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
+vim.keymap.set("n", "<leader>tsp", ":TransparentToggle<CR>")
+
 vim.keymap.set('n', '<Tab>', '>>_')
 vim.keymap.set('n', '<S-Tab>', '<<_')
 

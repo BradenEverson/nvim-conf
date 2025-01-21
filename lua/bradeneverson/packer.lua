@@ -40,14 +40,6 @@ use {
     end
 }
 
-use {
-  "~/source/lua/typebeat.nvim",
-  as = "typebeat",
-  config = function()
-    require("typebeat")
-  end
-}
-
 use({
 	'rebelot/kanagawa.nvim',
 	as = 'kanagawa',
