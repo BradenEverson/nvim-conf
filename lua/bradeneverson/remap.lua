@@ -43,6 +43,8 @@ vim.keymap.set("n", "<leader>r", function()
     vim.cmd("terminal cargo run")
   elseif file_ext == "go" then
     vim.cmd("terminal go run .")
+  elseif file_ext == "zig" then 
+    vim.cmd("terminal zig build run")
   else
     print("Unsupported file type for running.")
   end
