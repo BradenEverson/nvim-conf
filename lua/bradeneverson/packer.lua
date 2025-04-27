@@ -38,40 +38,11 @@ use { "akinsho/toggleterm.nvim", tag = '*' }
 use 'Civitasv/cmake-tools.nvim'
 
 use {
-  'nvim-lualine/lualine.nvim',
-  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-}
-
-use {
-    'KadoBOT/nvim-spotify',
-    requires = 'nvim-telescope/telescope.nvim',
-    config = function()
-        local spotify = require'nvim-spotify'
-
-        spotify.setup {
-            status = {
-                update_interval = 10000, -- the interval (ms) to check for what's currently playing
-                format = '%s %t by %a' -- spotify-tui --format argument
-            }
-        }
-    end,
-    run = 'make'
-}
-
-use {
     'numToStr/Comment.nvim',
     config = function()
         require('Comment').setup()
     end
 }
-
-use({
-	'rebelot/kanagawa.nvim',
-	as = 'kanagawa',
-    --config = function()
-		--vim.cmd('colorscheme kanagawa')
-	--end
-})
 
 use("ThePrimeagen/vim-be-good")
 
@@ -83,10 +54,7 @@ use({
 	end
 })
 
-use('cocopon/iceberg.vim')
 use('OmniSharp/omnisharp-vim')
-use({'catppuccin/nvim', as = 'catppucin'})
-use 'AlexvZyl/nordic.nvim'
 use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 use('nvim-treesitter/playground')
 use('theprimeagen/harpoon')

@@ -1,5 +1,5 @@
 function ColorMyPencils(color)
-	color = color or "iceberg"
+	color = color or "vague"
 	vim.cmd.colorscheme(color)
 end
 
