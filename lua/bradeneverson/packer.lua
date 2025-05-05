@@ -4,33 +4,10 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-  -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 use {
   'nvim-telescope/telescope.nvim', tag = '0.1.8',
--- or                            , branch = '0.1.x',
   requires = { {'nvim-lua/plenary.nvim'} }
-}
-
-use {
-    'cameron-wags/rainbow_csv.nvim',
-    config = function()
-        require 'rainbow_csv'.setup()
-    end,
-    -- optional lazy-loading below
-    module = {
-        'rainbow_csv',
-        'rainbow_csv.fns'
-    },
-    ft = {
-        'csv',
-        'tsv',
-        'csv_semicolon',
-        'csv_whitespace',
-        'csv_pipe',
-        'rfc_csv',
-        'rfc_semicolon'
-    }
 }
 
 use { "akinsho/toggleterm.nvim", tag = '*' }
@@ -54,7 +31,6 @@ use({
 	end
 })
 
-use('OmniSharp/omnisharp-vim')
 use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 use('nvim-treesitter/playground')
 use('theprimeagen/harpoon')
@@ -64,7 +40,6 @@ use('tpope/vim-fugitive')
 use 'neovim/nvim-lspconfig'
 use 'simrat39/rust-tools.nvim'
 
--- Debugging
 use 'nvim-lua/plenary.nvim'
 use 'mfussenegger/nvim-dap'
 
@@ -72,15 +47,13 @@ use {
   'VonHeikemen/lsp-zero.nvim',
   branch = 'v2.x',
   requires = {
-    -- LSP Support
-    {'neovim/nvim-lspconfig'},             -- Required
-    {'williamboman/mason.nvim'},           -- Optional
-    {'williamboman/mason-lspconfig.nvim'}, -- Optional
+    {'neovim/nvim-lspconfig'},
+    {'williamboman/mason.nvim'},
+    {'williamboman/mason-lspconfig.nvim'},
 
-    -- Autocompletion
-    {'hrsh7th/nvim-cmp'},     -- Required
-    {'hrsh7th/cmp-nvim-lsp'}, -- Required
-    {'L3MON4D3/LuaSnip'},     -- Required
+    {'hrsh7th/nvim-cmp'},
+    {'hrsh7th/cmp-nvim-lsp'},
+    {'L3MON4D3/LuaSnip'},
   }
 }
 
